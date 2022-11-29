@@ -1,0 +1,22 @@
+﻿@model List<Skill>
+
+
+@{
+	ViewData["Title"] = "Skills";
+	Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Skills</h1>
+
+<a type="button" class="btn btn-primary" asp-action="AddSkill" >Yeni Yetenek Ekle</a>
+
+@foreach (var item in Model)
+{
+	<div class="mb-2">
+		<span class="skill">@item.SkillTitle <i class="val">@item.SkillValue %</i></span>
+		<div class="progress" style="height: 20px;">
+			<div class="progress-bar" role="progressbar" style="width: @item.SkillValue%;" aria-valuenow="@item.SkillValue.ToString()" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+	</div>
+}
+

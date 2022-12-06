@@ -1,0 +1,28 @@
+﻿@model List<Reference>
+
+@{
+    ViewData["Title"] = "References";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>References</h1>
+
+<table>
+	<thead>
+		<tr>
+			<td>Full Name</td>
+			<td>Major</td>
+			<td>Message</td>
+        </tr>
+    </thead>
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.FullName</td>
+				<td>@item.Major</td>
+				<td>@item.Message</td>
+			</tr>
+		}
+	</tbody>
+</table>

@@ -1,38 +1,41 @@
-﻿<!-- ======= Mobile nav toggle button ======= -->
+﻿@model SocialMedia
+<!-- ======= Mobile nav toggle button ======= -->
 <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+@{
+}
 
 <!-- ======= Header ======= -->
-@await Html.PartialAsync("PartialMenu")
+@await Component.InvokeAsync("SocialMedia")
 <!-- End Header -->
 <!-- ======= Hero Section ======= -->
 @await Component.InvokeAsync("Main")
 <!-- End Hero -->
 
 <main id="main">
-	<p>@(DateTime.Now.Year - 1995)</p>
-	<!-- ======= About Section ======= -->
-	@await Component.InvokeAsync("About")
-	<!-- End About Section -->
-	<!-- ======= Facts Section ======= -->
-	@await Component.InvokeAsync("Facts")
-	<!-- End Facts Section -->
-	<!-- ======= Skills Section ======= -->
-	@await Component.InvokeAsync("Skills")
-	<!-- End Skills Section -->
-	<!-- ======= Resume Section ======= -->
-	@await Component.InvokeAsync("Resume")
-	<!-- End Resume Section -->
-	<!-- ======= Portfolio Section ======= -->
-	@await Component.InvokeAsync("Portfolio")<!-- End Portfolio Section -->
-	<!-- ======= Services Section ======= -->
-	@await Component.InvokeAsync("Services")
-	<!-- End Services Section -->
-	<!-- ======= Referenceses Section ======= -->
-	@await Component.InvokeAsync("Referenceses")
-	<!-- End Referenceses Section -->
-	<!-- ======= Contact Section ======= -->
-	@await Component.InvokeAsync("Contact")
-	<!-- End Contact Section -->
+    <p>@(DateTime.Now.Year - 1995)</p>
+    <!-- ======= About Section ======= -->
+    @await Component.InvokeAsync("About")
+    <!-- End About Section -->
+    <!-- ======= Facts Section ======= -->
+    @await Component.InvokeAsync("Facts")
+    <!-- End Facts Section -->
+    <!-- ======= Skills Section ======= -->
+    @await Component.InvokeAsync("Skills")
+    <!-- End Skills Section -->
+    <!-- ======= Resume Section ======= -->
+    @await Component.InvokeAsync("Resume")
+    <!-- End Resume Section -->
+    <!-- ======= Portfolio Section ======= -->
+    @await Component.InvokeAsync("Portfolio")<!-- End Portfolio Section -->
+    <!-- ======= Services Section ======= -->
+    @await Component.InvokeAsync("Services")
+    <!-- End Services Section -->
+    <!-- ======= Referenceses Section ======= -->
+    @await Component.InvokeAsync("Referenceses")
+    <!-- End Referenceses Section -->
+    <!-- ======= Contact Section ======= -->
+    @await Component.InvokeAsync("Contact")
+    <!-- End Contact Section -->
 </main><!-- End #main -->
 <!-- ======= Footer ======= -->
 @await Html.PartialAsync("PartialFooter")

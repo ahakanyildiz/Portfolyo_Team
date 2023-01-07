@@ -10,9 +10,11 @@
 <table>
 	<thead>
 		<tr>
-			<td>Full Name</td>
-			<td>Major</td>
-			<td>Message</td>
+			<th>Full Name</th>
+			<th>Major</th>
+			<th>Message</th>
+			<th>Güncelle</th>
+			<th>Sil</th>
         </tr>
     </thead>
 	<tbody>
@@ -22,6 +24,8 @@
 				<td>@item.FullName</td>
 				<td>@item.Major</td>
 				<td>@item.Message</td>
+				<td><a class="btn btn-outline-warning" asp-action="EditReference" asp-route-id="@item.Id">Güncelle</a></td>
+				<td><a class="btn btn-outline-danger" asp-action="DeleteReference" asp-route-id="@item.Id">Sil</a></td>				
 			</tr>
 		}
 	</tbody>

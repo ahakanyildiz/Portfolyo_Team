@@ -1,0 +1,31 @@
+﻿<div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+    <form asp-action="MesajGonder" asp-controller="Main" method="post" class="php-email-form">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="name">Adınız:</label>
+                <input type="text" name="FullName" class="form-control" id="name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">Email:</label>
+                <input type="email" class="form-control" name="Email" id="email" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name">Konu</label>
+            <input type="text" class="form-control" name="Subject" id="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="name">Mesaj</label>
+            <textarea class="form-control" name="Message" rows="10" required></textarea>
+        </div>
+        <div class="text-center"><button id="btnGonder" type="submit">Gönder</button></div>
+    </form>
+</div>
+
+<script>
+
+    document.getElementById("btnGonder").addEventListener("click", function (event) {
+        alert("Mesajınız başarıyla gönderildi.")
+    });
+</script>

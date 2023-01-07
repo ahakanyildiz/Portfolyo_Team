@@ -1,8 +1,8 @@
-﻿@model Portfolyo.Models.ReferenceImage
+﻿@model Reference
 
 @{
 	ViewData["Title"] = "AddReferences";
-	Layout = null;
+	Layout = "_LayoutAdmin";
 }
 
 <h1>AddReferences</h1>
@@ -14,24 +14,30 @@
 		<form method="post" asp-action="AddReferences" enctype="multipart/form-data">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<div class="form-group">
-				<label asp-for="FullName" class="control-label"></label>
-				<input asp-for="FullName" class="form-control" />
-				<span asp-validation-for="FullName" class="text-danger"></span>
+				<label asp-for="@Model.FullName" class="control-label"></label>
+				<input asp-for="@Model.FullName" class="form-control" />
+				<span asp-validation-for="@Model.FullName" class="text-danger"></span>
 			</div>
 			<div class="form-group">
-				<label asp-for="Major" class="control-label"></label>
-				<input asp-for="Major" class="form-control" />
-				<span asp-validation-for="Major" class="text-danger"></span>
+				<label asp-for="@Model.Major" class="control-label"></label>
+				<input asp-for="@Model.Major" class="form-control" />
+				<span asp-validation-for="@Model.Major" class="text-danger"></span>
 			</div>
 			<div class="form-group">
-				<label asp-for="Message" class="control-label"></label>
-				<input asp-for="Message" class="form-control" />
-				<span asp-validation-for="Message" class="text-danger"></span>
+				<label asp-for="@Model.Message" class="control-label"></label>
+				<input asp-for="@Model.Message" class="form-control" />
+				<span asp-validation-for="@Model.Message" class="text-danger"></span>
 			</div>
-			<input asp-for="@Model.WriterImage" />
+
+
+				<label class="form-label">Resim</label>
+                <input type="file" name="imgFile" class="form-control-file"/>
+
+			
 			<div class="form-group">
 				<input type="submit" value="Create" class="btn btn-primary" />
 			</div>
+
 		</form>
 	</div>
 </div>

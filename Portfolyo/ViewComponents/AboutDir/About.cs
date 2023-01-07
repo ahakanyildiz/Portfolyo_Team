@@ -8,7 +8,7 @@ namespace Portfolyo.ViewComponents.AboutDir
         MsSqlContext _context = new MsSqlContext();
         public IViewComponentResult Invoke()
         {
-            var data = _context.Abouts.FirstOrDefault(x=>x.Id==4);
+            var data = _context.Abouts.FirstOrDefault(x => x.Id == 4);
             return View(data);
         }
     }
